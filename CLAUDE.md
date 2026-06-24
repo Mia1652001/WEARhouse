@@ -31,21 +31,34 @@ npm run lint             # check for code errors
 npm install <package>    # add a new package
 ```
 
-## Brand Assets — WAITING ON CLIENT
-The client is sending: logo, exact colors, fonts, designs, taglines, and copy.
+## Brand Assets
 
-**Do not invent or assume any brand details until assets arrive.**
+### Colors
+| Role | Hex | Usage |
+|------|-----|-------|
+| Yellow | `#FFDE59` | "wear" in logo, headings, accents, warning triangle |
+| Off-white | `#F7F5F0` | Site background |
+| Black | `#1A1A1A` | "house" in logo, body text |
 
-Once received, update this section:
-```
-Primary color:     #______
-Secondary color:   #______
-Accent color:      #______
-Font (display):    ______
-Font (body):       ______
-Logo file:         /public/logo.___
-Tagline:           "______"
-```
+### Logo
+Official SVG logo at `/public/wearhouse-logo.svg`. Used as `<img>` in the navbar (h-10 w-auto). Text fallback: **"wear"** in yellow (`#FFDE59`), **"house"** in black (`#1A1A1A`), with a small price-tag mark after it.
+
+### Typography
+- **Display font:** Inter
+- **Body font:** Inter
+- No serif fonts.
+
+### Tagline
+"Good Pieces Don't Last Long"
+
+### Brand Voice
+Fun, witty, confident — speaks to fashion-loving young women.
+
+### Signature Visual
+Yellow/black warning tape dividers and a warning triangle.
+
+### Store Location
+Kinoo Square, Port Louis, Mauritius.
 
 ## Project Structure
 ```
@@ -75,8 +88,8 @@ Update this as the project grows:
 ### Done
 - [ ] Next.js 16 project created
 - [ ] Tailwind configured
-- [ ] Client brand assets received
-- [ ] Brand identity set up in CLAUDE.md
+- [x] Client brand assets received
+- [x] Brand identity set up in CLAUDE.md
 - [ ] Homepage designed
 - [ ] Product listing page built
 - [ ] Product detail page built

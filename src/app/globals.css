@@ -1,9 +1,33 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
+  --color-brand-gold: #FFDE59;
+  --color-brand-offwhite: #F7F5F0;
+  --color-brand-near-black: #1A1A1A;
+  --font-sans: var(--font-inter);
+  --animate-marquee: marquee 22s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Hides the scrollbar visually while keeping the element scrollable */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

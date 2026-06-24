@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import SaleBanner from "@/components/SaleBanner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geist = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Maison — Thoughtfully Made Clothing",
-  description: "Discover Maison's collection of timeless, quality clothing for women and men. New arrivals, essentials, and seasonal sale.",
+  title: "WEARhouse — Good Pieces Don't Last Long",
+  description: "Fashion-forward pieces for the girl who knows what she wants. Shop WEARhouse at Kinoo Square, Port Louis, Mauritius.",
 };
 
 export default function RootLayout({
@@ -20,9 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geist.variable} h-full`}>
-      <body className="min-h-full flex flex-col antialiased bg-white text-stone-900">
+    <html lang="en" className={`${inter.variable} h-full`}>
+      <body className="min-h-full flex flex-col antialiased bg-brand-offwhite text-brand-near-black">
         <Navbar />
+        <SaleBanner />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
